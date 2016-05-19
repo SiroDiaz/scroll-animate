@@ -1,0 +1,25 @@
+{
+  "name": "scroll-transition",
+  "version": "1.0.0",
+  "description": "A jQuery plugin that animate elements with the scroll event using CSS3 animations",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SiroDiaz/scroll-animate.git"
+  },
+  "keywords": [
+    "scroll",
+    "animation",
+    "jquery",
+    "plugin"
+  ],
+  "author": "Siro Díaz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SiroDiaz/scroll-animate/issues"
+  },
+  "homepage": "https://github.com/SiroDiaz/scroll-animate#readme"
+}
