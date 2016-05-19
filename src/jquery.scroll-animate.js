@@ -24,7 +24,7 @@
                    var $elem = this.elements[i].elem;
                    if(this._between(this.elements[i].offset, distanceTop, distanceBottom)) {
                        if(!$elem.hasClass(settings.startAnimation)) {
-                           var effect = $elem.attr('class');
+                           var effect = this.elements[i].animation;
                            $elem.removeClass().addClass(effect +' '+ settings.startAnimation);
                        }
                    }
@@ -37,7 +37,8 @@
                    var offset = $elem.offset().top; // $elem.offset().top - elemHeight;
                    var elemData = {
                        'elem': $elem,
-                       'offset': offset
+                       'offset': offset,
+                       'animation': $elem.attr('data-animate')
                    };
                    
                    this.elements.push(elemData);
