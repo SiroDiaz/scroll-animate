@@ -21,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/SiroDiaz/scroll-animate/issues"
   },
-  "homepage": "https://github.com/SiroDiaz/scroll-animate#readme"
+  "homepage": "https://github.com/SiroDiaz/scroll-animate#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-uglify": "^1.5.3"
+  }
 }
