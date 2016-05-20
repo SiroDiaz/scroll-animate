@@ -15,10 +15,10 @@
                return (pos >= top && pos <= bottom);
            },
            onScroll: function(e) {
-               var elemsLength = this.elements.length;
-               var windowHeight = parseInt($(window).height());     // get the browser height
-               var distanceTop = parseInt($(window).scrollTop());   // get the distance to the top in pixels
-               var distanceBottom = windowHeight + distanceTop;
+               var elemsLength = this.elements.length,
+                   windowHeight = parseInt($(window).height()),     // get the browser height
+                   distanceTop = parseInt($(window).scrollTop()),   // get the distance to the top in pixels
+                   distanceBottom = windowHeight + distanceTop;
                
                for(var i = 0; i < elemsLength; i++) {
                    var $elem = this.elements[i].elem;
@@ -31,20 +31,20 @@
                }
            },
            initialize: function() {
-               for(var i = 0; i < $(self).size(); i++) {
-                   var $elem = $(self).eq(i);
-                   var elemHeight = $elem.height();
-                   var offset = $elem.offset().top; // $elem.offset().top - elemHeight;
-                   var elemData = {
-                       'elem': $elem,
-                       'offset': offset,
-                       'animation': $elem.attr('data-animate')
-                   };
+               var itemsLength = $(self).size();
+               for(var i = 0; i < itemsLength; i++) {
+                   var $elem = $(self).eq(i),
+                       elemHeight = $elem.height(),
+                       offset = $elem.offset().top, // $elem.offset().top - elemHeight;
+                       elemData = {
+                           'elem': $elem,
+                           'offset': offset,
+                           'animation': $elem.attr('data-animate')
+                       };
                    
                    this.elements.push(elemData);
                }
                
-               console.log(this.elements);
                this.onScroll();
                this.initScroll();
            },
