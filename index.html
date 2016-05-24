@@ -2,9 +2,117 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>jQuery animate for scroll transitions</title>
+    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/dist/animate.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #333;
+            font-size: 16px;
+            color: #fff;
+            font-family: 'Varela Round', sans-serif;
+        }
+        .title-container {
+            width: 920px;
+            margin: 0 auto;
+            margin-top: 200px;
+        }
+        .title {
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 200px;
+        }
+        .title h1 {
+            color: #30BD4F;
+            font-size: 3em;
+        }
+        .text-center {
+            text-align: center;
+        }
+        hr {
+            border: none;
+            margin-top: -1px;
+            height: 1px;
+            background-color: #c0c8c9;
+            background-image: -webkit-linear-gradient(0deg, #fff, #c0c8c9, #fff);
+        }
+        .subtitle {
+            font-size: 1em;
+        }
+        a {
+            color: #30BD4F;
+        }
+    </style>
 </head>
 <body>
+    <div class="title-container">
+        <div class="title">
+            <h1 data-animate="fadeInUp">Scroll animate for jQuery</h1>
+        </div>
+        <div class="subtitle">
+            <h3>A jQuery plugin for add CSS animations to HTML elements attached in the scroll event...in less than <strong>1kb</strong></h3>
+        </div>
+        <div class="text-center">
+            <a class="github-button" href="https://github.com/SiroDiaz/scroll-animate" data-icon="octicon-star" data-style="mega" data-count-href="/SiroDiaz/scroll-animate/stargazers" data-count-api="/repos/SiroDiaz/scroll-animate#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star SiroDiaz/scroll-animate on GitHub">Star</a>
+            <a class="github-button" href="https://github.com/SiroDiaz/scroll-animate/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/SiroDiaz/scroll-animate/network" data-count-api="/repos/SiroDiaz/scroll-animate#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork SiroDiaz/scroll-animate on GitHub">Fork</a>
+        </div>
+        <div>
+            <hr>
+            <h3>Usage</h3>
+            <div>
+                First you must link the CSS animation classes. For this example we will use <a target="_blank" href="https://github.com/daneden/animate.css">animate.css</a>
+                <pre data-animate="fadeInUp">
+                    <code class="html">
+&lt;link rel="stylesheet" href="/dist/animate.css" /&gt;
+                    </code>
+                </pre>
+                Then insert the <strong><em>data-animate</em></strong> attribute to the HTML element that you want to animate.
+                Add the class name inside the attribute that contains the animation.
+                For see the scroll animation the image is going to be placed at 2000px of the top:
+                <pre data-animate="fadeInUp">
+                    <code class="html">
+&lt;div style="margin-top: 2000px;"&gt;
+    &lt;img data-animate="slideInRight" src="http://lorempixel.com/640/400/"&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+                Finally append at the end of body tag jQuery and the plugin in the same order that in the example.
+                Then initialize the plugin for <em>data-animate</em> elements.
+                <pre data-animate="fadeInUp">
+                    <code class="html">
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="/dist/jquery.scroll-animate.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    $('[data-animate]').scrollAnimate();
+&lt;/script&gt;
+                    </code>
+                </pre>
+            </div>
+            <div>
+                <hr>
+                <h3>Parameters</h3>
+                <pre data-animate="fadeInUp">
+                    <code class="javascript">
+{
+    startAnimation: 'animated'
+}
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+    <script src="/dist/jquery.scroll-animate.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+        $('[data-animate]').scrollAnimate();
+    </script>
 </body>
 </html>
